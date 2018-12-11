@@ -10,6 +10,7 @@
   "author": "Michael San Juan",
   "license": "ISC",
   "dependencies": {
+    "express":"*",
     "body-parser": "^1.18.3",
     "express-fileupload": "^1.0.0",
     "express-session": "^1.15.6",
