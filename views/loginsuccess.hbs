@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>log in success</title>
+    <link rel="stylesheet" type="text/css" href="loginsuccess.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
+</head>
+
+<body>
+	<div id="header">
+		<p id="logo">JSChallenger</p>
+		<form method="get" action='/logout'>
+			<button id="logout" type="submit">Logout</button>
+		</form>
+	</div>
+	<div id="content">
+		<p>What you will need: </p>
+		<p></p>
+		<p>- Windows 10, 8, 7, MacOS or Linux</p>
+		<p>- 1024x768 minimum screen resolution</p>
+	<p>- Any Javascript IDE such as Brackets, Sublime, Visual Studio Code</p>
+		<form method="get" action="/download">
+   			<button class="button" id="download-button" type="submit">Download The Challenge</button>
+		</form>
+		
+    	<button class="button" id="upload-button">Upload your Challenge</button>
+	</div>
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+    		<span class="close">&times;</span>
+			<form ref='uploadForm' 
+      		id='uploadForm' 
+      		action='http://localhost:8080/upload' 
+      		method='post' 
+      		encType="multipart/form-data">
+	        	<input type="file" name="sampleFile" />
+	        	<button type='submit' value='Upload your Challenge'>Upload!</button>
+	    	</form>     
+		</div>
+	</div>
+		</div>
+
+	<!-- Trigger/Open The Modal -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("upload-button");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

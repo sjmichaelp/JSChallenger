@@ -1,0 +1,68 @@
+body{
+	font-family: Consolas,monaco,monospace;
+	color:white;
+}
+#header {
+	background-color: black;
+	width: 100%;
+	height: 15%;
+	top: 0;
+	left: 0;
+	position:absolute;
+}
+#content {
+	background-image:url(https://www.desktopbackground.org/p/2014/02/09/714245_1920x1080-pattern-green-abstract-desktop-pc-and-mac-wallpapers_1920x1080_h.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position: center;
+	width:100%;
+	height:85%;
+	top:15%;
+	left:0;
+	position:absolute;
+}
+#signup {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	height: 300px;
+	width:350px;
+	background-color:rgba(0,0,0);
+	color:white;
+	box-shadow: -9px 1px 10px rgba(10,10,10,0.6);
+	text-align:center;
+}
+
+#logo{
+	font-family: Consolas,monaco,monospace;
+	color:white;
+}
+.field-forms{
+	height:35px;
+	width:270px;
+	border-radius:20px;
+	margin-bottom:5%;
+	border-style:solid;
+	border-width: 2px;
+    border-color: grey;
+	background-color:black;
+	padding-left:20px;
+	color:white;
+}
+.credential-buttons{
+	height:35px;
+	width:295px;
+	border-radius:20px;
+	margin-bottom:5%;
+	border-style:none;
+	background-color:rgb(0, 128, 0);
+	color:white;
+}
+#sign-in{
+	padding-top:5%;
+	padding-left:10%;
+	text-align:left;
+	font-size:16pt;
+	margin-bottom:10%;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+
+	<div id="header"><p id="logo">JSChallenger</p></div>
+
+
+	<div id="content">
+		<div id="info-form">
+		<p>What is JSChallenger?</p>
+		<p></p>
+		<p>JSChallenger is a web application that creates unique challenges for users who want to test their javascript chops. If you think you've got what it takes to complete the challenge, signup and receive your free challenge code now. </p></div>
+		<div id="login-form">
+			<form id="login" enctype='application/json' action="/loginsuccess" method="post">
+				<div id="sign-in">Sign In</div>
+				<p>{{status}}</p>
+				<input type="text" class="field-forms" name="username" placeholder="Username"><br>
+				<input type="password" class="field-forms" name="password" placeholder="Password"><br>
+				<input type="submit" class="credential-buttons" value="Login">
+			</form>
+			<form id="signup" action="/signup" method="get">
+				<input type="submit" class="credential-buttons" value="Signup">
+			</form>
+		</div>
+		
+	</div>
+
+</body>
+</html>
