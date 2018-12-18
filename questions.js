@@ -1,25 +1,17 @@
 
 
-// Reverse an array, except for the first and last elements
-// Example: [1,2,3,"a","b","c"] will return [1,"b","a",3,2,"c"]
+// Sort an array of numbers in ascending order. Remove negative numbers and duplicates.
+// Example: [25,-100,-1.1,5,23.5,25] will return [5,23.5,25]
 function question0(inputArr) {
-	tempFirst = inputArr.shift();
-    tempLast = inputArr.pop();
-    temp = inputArr.reverse();
-    temp.unshift(tempFirst);
-    temp.push(tempLast);
-    return temp
+
 }
 
 
 
-// Convert an array of integers to signed binary, return as array of strings.
-// Example: [1,-3,5,-7,9] will return ['1','-11','101','-111','1001']
-function question1(inputArr) {
-    for (i = 0; i < inputArr.length; i++) {
-        inputArr[i] = (inputArr[i]).toString(2);
-    }
-    return inputArr
+// Return the float point variable number1 as an array of integers, ignoring the period.
+// Example: 123.45 will return [1,2,3,4,5]
+function question1(number1) {
+
 }
 
 
@@ -27,32 +19,30 @@ function question1(inputArr) {
 // Return number2 divided by number1, rounded down to 2 decimal places
 // Example: 3, 37 will return 12.33
 function question2(number1, number2) {
-    return Math.floor((number2 / number1) * 100) / 100	
-}
-
-
-
-// Return the answer of number1 to the power of number2
-// Example: 10, 15 will return 25
-function question3(number1, number2) {
 
 }
 
 
 
+// Given a random input, return 1 if its a number, 2 if its a string, 3 otherwise
+// Example: 345 will return 1, '345' will return 2, [345] will return 3
+function question3(input) {
 
-// Sort an array of numbers in ascending order. Remove negative numbers and duplicates.
-// Example: [25,-100,-1.1,5,23.5,25] will return [5,23.5,25]
-function question4(inputArr) {
+}
+
+
+// Given the index position, calculate the value of the fibonacci sequence
+// Example: 20 will return 6765
+function question4(number1) {
 
 }
 
 
 
 module.exports = {
-    q5 : question0,
-    q7 : question1,
+    q6 : question0,
+    q2 : question1,
     q1 : question2,
-    q0 : question3,
-    q6 : question4,
+    q9 : question3,
+    q8 : question4,
 };
