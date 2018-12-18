@@ -7,14 +7,32 @@ const fs = require('fs');
 * Require Data: user
 * @param {object} user - Requires username, password 
 */
-var register = (user) => {
+var register = (user, callback) => {
    var logins = fs.readFileSync('logins.json', 'utf8');
    var loginsObject = JSON.parse(logins);
 
-   loginsObject.push(user);
-   var resultString = JSON.stringify(loginsObject);
-   fs.writeFileSync('logins.json', resultString);
+   	function getExistingUsername(name) {
+		return loginsObject.filter(
+			function(loginsObject) {
+				return loginsObject.username == name;
+			});
+	}
 
+	var userdata = getExistingUsername(user.username);
+	if (user.username && user.password) {
+		if (userdata.length > 0) {
+			callback("username already exists", {});
+		} else {
+			loginsObject.push(user);
+			var resultString = JSON.stringify(loginsObject);
+			fs.writeFileSync('logins.json', resultString);
+			callback(undefined, {
+				status: "signup success"
+			})
+		}
+	} else {
+		callback("invalid username or password", {});
+	}
 };
 
 /**

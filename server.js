@@ -108,10 +108,23 @@ app.post('/signupsuccess', (request, response) => {
 		username: request.body.username,
 		password: request.body.password
 	}
-	login.register(user);
-		response.render('index.hbs', {
-			status: "signup success"
-	});
+
+		login.register(user, (errorMessage, results) => {
+			if (errorMessage) {
+				console.log(errorMessage);
+				response.render('signup.hbs', {
+					status: errorMessage
+				});
+			} else {
+				if (!results) {
+					return response.status(404).send();
+				} else {
+					response.render('index.hbs', {
+						status: results.status
+					});
+				}
+			}
+		});
 });
 
 app.listen(port, () => {
